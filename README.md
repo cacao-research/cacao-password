@@ -8,6 +8,8 @@
 
 A secure password generator with both CLI and GUI interfaces, featuring a brown-themed design and comprehensive password analysis capabilities.
 
+<img width="359" height="356" alt="image" src="https://github.com/user-attachments/assets/7356a059-b49c-4233-9039-ad55d79e53cb" />
+
 ## 🌟 Features
 
 - **Password Generation**: Create cryptographically secure passwords with customizable options

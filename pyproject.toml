@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cacao-password"
+version = "1.0.1"
+description = "A secure password generator with brown-themed GUI and CLI interfaces"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [ { name="Juan Denis", email="juan@vene.co" } ]
+keywords = ["password", "generator", "security", "gui", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Utilities"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "cacao-password-generator"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "mypy"
+]
+
+[project.urls]
+Homepage = "https://github.com/cacao-research/cacao-password"
+"Bug Reports" = "https://github.com/cacao-research/cacao-password/issues"
+Source = "https://github.com/cacao-research/cacao-password"
+
+[project.scripts]
+cacao-password = "cacao_password.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["cacao_password"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
